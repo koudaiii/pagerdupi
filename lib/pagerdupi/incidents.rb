@@ -10,7 +10,7 @@ module Pagerdupi
         limit: 25,
         since: (Time.now - 7 * 24 * 60 * 60).strftime('%Y-%m-%d'),
         until: Time.now.strftime('%Y-%m-%d'),
-        time_zone: 'Asia/Tokyo',
+        time_zone: 'UTC',
       }
       query_params = default_params.merge(params)
 
