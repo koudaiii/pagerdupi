@@ -5,7 +5,7 @@ module Pagerdupi
       @pagerdupi = Pagerdupi::Client.new(api_key)
     end
 
-    def list(params = {})
+    def get_incidents(params = {})
       default_params = {
         limit: 25,
         since: (Time.now - 7 * 24 * 60 * 60).strftime('%Y-%m-%d'),
@@ -17,7 +17,8 @@ module Pagerdupi
       Hashie::Mash.new(@pagerdupi.get('/incidents', query: query_params))
     end
 
-    def show(params = {})
+    def get_incident(incident_id)
+      Hashie::Mash.new(@pagerdupi.get("/incidents/#{params[:incident_id]}"))
     end
 
     def create(params = {})
@@ -26,7 +27,5 @@ module Pagerdupi
     def update(params = {})
     end
 
-    def delete(params = {})
-    end
   end
 end
