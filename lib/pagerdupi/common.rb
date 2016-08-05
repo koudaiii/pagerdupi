@@ -1,7 +1,3 @@
-require 'pp'
-require 'httparty'
-require 'hashie'
-
 module Pagerdupi
   class Client
     include HTTParty
