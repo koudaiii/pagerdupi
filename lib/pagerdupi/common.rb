@@ -15,5 +15,30 @@ module Pagerdupi
         output: 'json'
       }
     end
+
+    def get(req, opts = {})
+      opts = opts.merge(@options)
+      self.class.get("#{req}", opts)
+    end
+
+    def post(req, opts = {})
+      opts = opts.merge(@options)
+      self.class.post("#{req}", opts)
+    end
+
+    def patch(req, opts = {})
+      opts = opts.merge(@options)
+      self.class.patch("#{req}", opts)
+    end
+
+    def put(req, opts = {})
+      opts = opts.merge(@options)
+      self.class.put("#{req}", opts)
+    end
+
+    def delete(req, opts = {})
+      opts = opts.merge(@options)
+      self.class.delete("#{req}", opts)
+    end
   end
 end
