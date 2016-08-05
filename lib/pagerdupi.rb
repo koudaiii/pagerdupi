@@ -1,5 +1,14 @@
+require "pagerdupi/common"
+require "pagerdupi/abilities"
+require "pagerdupi/add_ons"
+require "pagerdupi/escalation_policies"
+require "pagerdupi/incidents"
+require "pagerdupi/log_entries"
+require "pagerdupi/maintenance_windows"
+require "pagerdupi/notifications"
+require "pagerdupi/on_calls"
+require "pagerdupi/schedules"
+require "pagerdupi/teams"
+require "pagerdupi/users"
+require "pagerdupi/vendors"
 require "pagerdupi/version"
-
-module Pagerdupi
-  # Your code goes here...
-end
