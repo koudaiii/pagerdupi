@@ -28,7 +28,7 @@ Or install it yourself as:
 require 'pagerdupi'
 
 incidents = Pagerdupi::Incident.new('xxxxxxxxxxxx')
-puts incidents.list
+puts incidents.get_incidents
 ```
 
 ## Development
