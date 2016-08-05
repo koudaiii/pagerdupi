@@ -1,3 +1,6 @@
+require "hashie"
+require "httparty"
+require "pp"
 require "pagerdupi/common"
 require "pagerdupi/abilities"
 require "pagerdupi/add_ons"
