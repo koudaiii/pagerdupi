@@ -8,4 +8,5 @@ group :development do
   gem "guard-rspec", "~> 4.7.0"
   gem "pry"
   gem "dotenv"
+  gem "hashie"
 end

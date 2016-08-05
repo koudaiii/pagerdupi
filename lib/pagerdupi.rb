@@ -1,4 +1,3 @@
-require "hashie"
 require "httparty"
 require "pp"
 require "pagerdupi/common"

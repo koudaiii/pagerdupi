@@ -14,11 +14,11 @@ module Pagerdupi
       }
       query_params = default_params.merge(params)
 
-      Hashie::Mash.new(@pagerdupi.get('/incidents', query: query_params))
+      @pagerdupi.get('/incidents', query: query_params)
     end
 
     def get_incident(incident_id)
-      Hashie::Mash.new(@pagerdupi.get("/incidents/#{params[:incident_id]}"))
+      @pagerdupi.get("/incidents/#{params[:incident_id]}")
     end
 
     def create(params = {})
