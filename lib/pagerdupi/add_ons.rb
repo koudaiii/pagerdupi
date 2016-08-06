@@ -1,14 +1,11 @@
 module Pagerdupi
   class AddOne
-    def list
+    def initialize(api_key)
+      @pagerdupi = Pagerdupi::Client.new(api_key)
     end
-    def show
-    end
-    def create
-    end
-    def update
-    end
-    def delete
+
+    def get_addons
+      @pagerdupi.get('/addones')
     end
   end
 end
