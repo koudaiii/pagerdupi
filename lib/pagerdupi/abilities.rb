@@ -1,6 +1,11 @@
 module Pagerdupi
   class Ability
-    def list
+    def initialize(api_key)
+      @pagerdupi = Pagerdupi::Client.new(api_key)
+    end
+
+    def get_abilities
+      @pagerdupi.get('/abilities')
     end
     def show
     end
